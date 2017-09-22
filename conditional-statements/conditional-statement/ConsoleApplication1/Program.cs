@@ -11,7 +11,7 @@ namespace conditional_statement
         static void Main(string[] args)
         {
             // define instructions
-            Console.WriteLine("Ohjelma kertoo onko luku positiivinen, negatiivinen tai nolla.");
+            Console.WriteLine("Ohjelma kertoo onko luku parillinen vai pariton");
             bool isNumber;
             do
             {
@@ -27,17 +27,13 @@ namespace conditional_statement
                 // program logic
                 if (isNumber == true)
                 {
-                    if (evaluatedNumber < 0)
+                    if (evaluatedNumber % 2 == 0)
                     {
-                        Console.WriteLine($"Numero {evaluatedNumber} on negatiivinen");
-                    }
-                    else if (evaluatedNumber > 0)
-                    {
-                        Console.WriteLine($"Numero {evaluatedNumber} on positiivinen");
+                        Console.WriteLine($"Numero {evaluatedNumber} on parillinen");
                     }
                     else
                     {
-                        Console.WriteLine($"Numero {evaluatedNumber} on nolla");
+                        Console.WriteLine($"Numero {evaluatedNumber} on pariton");
                     }
                 }
                 else
@@ -46,7 +42,7 @@ namespace conditional_statement
 
 
                 }
-                
+
             } while (isNumber == false);
 
             Console.ReadKey();
