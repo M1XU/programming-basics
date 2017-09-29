@@ -16,47 +16,62 @@ namespace conditional_statement
             do
             {
                 // define variables
-                Console.Write("Syötä 1. luku: ");                 
-                string userInputEka;
-                userInput = Console.ReadLine();
+                Console.Write("Syötä 1. luku: ");
+                string Eka = Console.ReadLine();
+                int numx = int.Parse(Eka);
+
                 Console.Write("Syötä 2. luku: ");
-                string userInputToka;
-                userInput = Console.ReadLine();
+                string Toka = Console.ReadLine();
+                int numy = int.Parse(Toka);
+
                 Console.Write("Syötä 3. luku: ");
-                string userInputKolmas;
-                userInput = Console.ReadLine();
+                string Kolmas = Console.ReadLine();
+                int numz = int.Parse(Kolmas);
 
 
                 // program logic
                 {
-                    if (userInputEka < userInputToka)
+                    if (numx < numy)
                     {
-                        if (userInputEka < userInputKolmas)
+                        if (numx < numz)
                         {
-                            if (userInputToka < userInputKolmas)
+                            if (numy < numz)
                             {
-                                Console.WriteLine($"{userInputEka} , {userInputToka} , {userInputKolmas}");
+                                Console.WriteLine($"{numx} , {numy} , {numz}");
                             }
                             else
                             {
-                                Console.WriteLine($"{userInputEka} , {userInputKolmas} , {userInputToka}");
-                            }
+                                Console.WriteLine($"{numx} , {numz} , {numy}");
+                        }
                         else
                         {
-                            Console.WriteLine($"{userInputKolmas} , {userInputEka} , {userInputToka}");
+                                Console.WriteLine($"{numz} , {numx} , {numy}");
+                    }
+                    else
+                        {
+                                if (numx < numz)
+                                {
+                                    Console.WriteLine($"{numy} , {numz} , {numx}");
+                                }
+                                else
+                                {
+                                    if (numy < numz)
+                                    {
+                                        Console.WriteLine($"{numy} , {numz} , {numx}");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine($"{numz} , {numy} , {numx}");
+                                    }
+                                }
+                            }
                         }
-                    else
-                    {
-                    if (userInputEka < userInputKolmas)
-                    {
-                        Console.WriteLine($"{userInputToka} , {userInputEka} , {userInputKolmas}");
                     }
-                    else if(userInputToka < userInputKolmas)
-                    {
-                        Console.WriteLine($"{userInputToka} , {userInputKolmas} , {userInputEka}");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"{userInputKolmas} , {userInputToka} , {userInputEka}");
-                    }
+                }
+            
+    
+
+
+            
+
 
