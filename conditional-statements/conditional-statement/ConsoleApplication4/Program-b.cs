@@ -63,12 +63,10 @@ namespace conditional_statement
                     else
                     {
                         Console.WriteLine($"Järjestys on : {numz} , {numy} , {numx}");
-                    }
-
-                    Console.ReadKey();
+                    }                    
                 }
-                
             }
+            Console.ReadKey();
         }
     }
 }
