@@ -10,6 +10,7 @@ namespace Tehtävä_5
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             // Perustiedot
             // -Kysytään asiakkaan tiedot
             // - Lasketaan alennus
@@ -25,16 +26,19 @@ namespace Tehtävä_5
             // - Varusmies: 50 % alennus
             // - Opiskelija: 45 % alennus
 
+
+
             int hinta = 16;
-            // int mtk = 15;
-            int ale50 = 2;
-            // int opiskelija = 45;
+            // float mtk = 15;
+            int ale50 = 50;
+            // int oale = 45;
+            bool alennus = false
 
 
             Console.WriteLine("Syötä asiakkaan ikä : ");
-            string userInput = Console.ReadLine();
+            int ika = int.Parse(Console.ReadLine());
             //int.TryParse(userInput, out int number);
-            int ika = int.Parse(userInput);
+
             // int i = 0;
             // int f = 1;
  
@@ -45,19 +49,29 @@ namespace Tehtävä_5
             else if
             {
                 Console.WriteLine("Oletko Opiskelija ? (k/e)");
-                bool opiskelija = Console.ReadLine();
-                if (opiskelija == k)
+                string opiskelija = Console.ReadLine().ToUpper();
+                Console.WriteLine("Oletko MTK:n jäsen ? (k/e)");
+                string mtk = Console.ReadLine()ToUpper();
+
+                if (opiskelija == "K" && )
                     {
                     int oale = 2;
                     int alehinta = hinta / oale;
                     Console.WriteLine($"Lipun hinta on = {alehinta} euroa")
-                    }
+                    if (mtk == K)
+                        }
                 else
                 {
                     int alehinta = hinta;
                     Console.WriteLine($"Lipun hinta on = {alehinta} euroa")
                 }
+                if (ika  >=7 && ika <=15 && alennus == false)
+                {
+                    int ale = 50;
+                    alennus = true;
 
+                    Console.WriteLine($"Lipun hinta on : {hinta * 0} euroa ");
+                }
 
             }
             else if (ika <= 15)
@@ -75,6 +89,12 @@ namespace Tehtävä_5
             {
                 Console.WriteLine($"ikaale = 0");
             }
+            if (MTK =="K" && alennus == false)
+            {
+                ale = 15;
+                alennus = true;
+            }
+            decimal = totalPrice = (price - (price * Convert.ToDecimal(discount / 100m)));
             // Console.WriteLine($"ikäalennus {ikaale}");
 
             Console.ReadKey();
